@@ -39,7 +39,7 @@ export const profile = {
   location: "Perth, WA, Australia",
   email: "zeyu723@gmail.com",
   linkedin: "https://www.linkedin.com/in/zeyu-xu-658a51286",
-  github: "https://github.com/zeyu-xu",
+  github: "https://github.com/Zeyu723",
   portfolioDemo: "https://galaxy-zeyu.vercel.app",
   headline:
     "Software engineering student building deployable AI, security, and computer-vision systems.",

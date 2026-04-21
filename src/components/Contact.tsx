@@ -18,7 +18,7 @@ export default function Contact() {
     },
     {
       label: "GitHub",
-      value: "github.com/zeyu-xu",
+      value: "github.com/Zeyu723",
       href: profile.github,
       icon: Github,
     },
