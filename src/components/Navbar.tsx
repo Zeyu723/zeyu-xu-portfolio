@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { profile } from "../content/portfolio";
 
 const navItems = [
+  { name: "Agent Lab", href: "/agent-research" },
   { name: "Projects", href: "/projects" },
   { name: "Research", href: "/research" },
   { name: "Notes", href: "/notes" },

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AgentResearchPage from "./pages/AgentResearch";
 import Layout from "./components/Layout";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
@@ -15,6 +16,7 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/agent-research" element={<AgentResearchPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/research" element={<ResearchPage />} />

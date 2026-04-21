@@ -8,7 +8,7 @@ export default function About() {
         <div className="md:col-span-5">
           <p className="label-mono mb-4 text-accent">Profile</p>
           <h2 className="font-display text-5xl font-bold leading-none md:text-7xl">
-            Built for research, grounded in software engineering
+            Building agent systems with product discipline
           </h2>
         </div>
 
@@ -29,9 +29,10 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="text-lg leading-relaxed text-muted"
           >
-            My current work connects Android development, applied machine learning, and security.
-            I care about systems that can be explained, evaluated, and deployed, especially when
-            they support investigation or decision-making in real-world environments.
+            My current work connects AI agents, full-stack engineering, Android development, and
+            security-aware system design. I care about intelligent tools that remain useful after
+            the demo: stable interfaces, traceable actions, explicit boundaries, and workflows that
+            real users can understand.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}

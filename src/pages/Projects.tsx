@@ -21,8 +21,8 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="mt-8 max-w-3xl text-xl leading-relaxed text-muted">
-          CV-backed project work across mobile security, hackathon prototypes, AI automation,
-          computer vision, WebGL, and digital forensics.
+          CV-backed project work across AI agents, mobile security, hackathon prototypes,
+          full-stack systems, computer vision, WebGL, and digital forensics.
         </p>
 
         <div className="mt-12 flex flex-wrap gap-3 border-b border-border pb-8">

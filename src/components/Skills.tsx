@@ -13,7 +13,8 @@ export default function Skills() {
         </div>
         <div className="md:col-span-5 md:col-start-8">
           <p className="text-lg leading-relaxed text-muted">
-            A practical stack for building ML-backed mobile, web, security, and computer-vision systems.
+            A practical stack for building agent-backed workflows, full-stack products, mobile apps,
+            computer-vision interfaces, and security-aware systems.
           </p>
         </div>
       </div>

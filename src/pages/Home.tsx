@@ -2,12 +2,16 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import About from "../components/About";
+import AgentResearchPreview from "../components/AgentResearchPreview";
 import Contact from "../components/Contact";
 import Experience from "../components/Experience";
 import Hero from "../components/Hero";
+import PositioningPillars from "../components/PositioningPillars";
 import Projects from "../components/Projects";
 import ResearchInterests from "../components/ResearchInterests";
+import Roadmap from "../components/Roadmap";
 import Skills from "../components/Skills";
+import SupervisionFit from "../components/SupervisionFit";
 import { notes } from "../content/portfolio";
 
 const latestNotes = notes.slice(0, 2);
@@ -21,7 +25,9 @@ export default function Home() {
       transition={{ duration: 0.35 }}
     >
       <Hero />
+      <PositioningPillars />
       <ResearchInterests />
+      <AgentResearchPreview />
       <Projects />
 
       <section className="section-container py-28">
@@ -63,9 +69,11 @@ export default function Home() {
         </div>
       </section>
 
+      <Roadmap />
       <About />
       <Skills />
       <Experience />
+      <SupervisionFit />
       <Contact />
     </motion.div>
   );

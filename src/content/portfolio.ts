@@ -30,6 +30,40 @@ export type Note = {
   tags: string[];
 };
 
+export type AgentResearchFocus = {
+  title: string;
+  summary: string;
+  evidence: string[];
+};
+
+export type PositioningPillar = {
+  label: string;
+  title: string;
+  summary: string;
+  points: string[];
+};
+
+export type ArchitectureLayer = {
+  id: string;
+  title: string;
+  label: string;
+  summary: string;
+  details: string[];
+};
+
+export type RoadmapItem = {
+  phase: string;
+  title: string;
+  summary: string;
+  outputs: string[];
+};
+
+export type SupervisionFit = {
+  title: string;
+  summary: string;
+  signals: string[];
+};
+
 export const profile = {
   name: "Zeyu Xu",
   initials: "ZX",
@@ -42,38 +76,203 @@ export const profile = {
   github: "https://github.com/Zeyu723",
   portfolioDemo: "https://galaxy-zeyu.vercel.app",
   headline:
-    "Software engineering student building deployable AI, security, and computer-vision systems.",
+    "Software engineering student building AI agent systems, full-stack products, and security-aware software.",
   supervisorPitch:
-    "I am preparing for graduate research in applied machine learning for mobile and system security, AI-assisted digital forensics, and human-computer interaction through computer vision.",
+    "I am preparing for graduate research in reliable AI agents, human-AI workflows, orchestration and memory design, and deployable intelligent systems.",
   researchStatement:
-    "My strongest interest is not purely theoretical modelling, but interpretable systems that can be engineered, evaluated, deployed, and used in real environments.",
+    "My strongest interest is not simply using AI tools, but designing governable, traceable, execution-capable systems that can support real work over time.",
   availability: "Graduate research conversations welcome",
 };
 
 export const researchInterests: ResearchInterest[] = [
   {
-    title: "Behaviour-Based Android Malware Detection",
+    title: "Reliable Personal AI Agent Systems",
     summary:
-      "Applied machine learning for detecting data-exfiltration malware through permissions, network behaviour, and runtime signals rather than static signatures.",
-    methods: ["Android", "Kotlin", "Python", "KNN", "Neural networks"],
+      "Long-running AI systems that maintain a stable interaction surface while routing work across tools, models, memory layers, and execution engines.",
+    methods: ["Agent orchestration", "Tool use", "Memory design", "Evaluation"],
     supervisorFit:
-      "A good fit for supervision around mobile security, interpretable ML, and deployable cyber-defence tools.",
+      "A good fit for supervision around reliable agents, human-AI collaboration, explainability, and practical AI system architecture.",
   },
   {
-    title: "AI-Assisted Digital Forensics",
+    title: "Human-Centred AI Product Engineering",
     summary:
-      "Tooling and workflows that help investigators reconstruct events, keep audit trails, and reason about evidence without hiding methodology behind opaque automation.",
-    methods: ["Autopsy", "Wireshark", "John the Ripper", "Audit trails"],
+      "Full-stack and mobile interfaces that turn model capabilities into usable workflows, with attention to user needs, interaction design, and feedback loops.",
+    methods: ["React", "Android", "FastAPI", "UX systems"],
     supervisorFit:
-      "A good fit for research on forensic reliability, evidence pipelines, and human-in-the-loop security analysis.",
+      "A good fit for applied AI, HCI, software engineering, and user-facing intelligent systems.",
   },
   {
-    title: "Computer Vision for Human-Computer Interaction",
+    title: "Security-Aware Deployable Intelligence",
     summary:
-      "Gesture-driven interfaces that use computer vision to make interactive systems more natural while remaining stable under noisy real-time input.",
-    methods: ["Three.js", "MediaPipe Hands", "WebGL", "OpenCV"],
+      "AI systems with explicit boundaries, audit trails, local-first reasoning, and careful control over permissions, sensitive data, and automated actions.",
+    methods: ["Audit trails", "Governance files", "Android", "Digital forensics"],
     supervisorFit:
-      "A good fit for applied HCI, real-time interaction, and robust computer-vision interfaces.",
+      "A good fit for trustworthy AI, AI-assisted security, digital forensics, and secure software deployment.",
+  },
+];
+
+export const agentResearch: AgentResearchFocus[] = [
+  {
+    title: "Single Controller, Modular Execution",
+    summary:
+      "A stable front-end controller keeps the interaction consistent while backend engines remain replaceable. The goal is continuity without visible multi-agent clutter.",
+    evidence: [
+      "One coherent interaction surface for long-running work",
+      "Task routing across different coding and research engines",
+      "Cost-aware execution choices rather than one fixed model",
+    ],
+  },
+  {
+    title: "Governance and Layered Memory",
+    summary:
+      "Persistent agents need more than chat history. I am exploring explicit identity, user profile, project memory, tool registry, and boundary files as maintainable system anchors.",
+    evidence: [
+      "Root-level design files for identity, tools, memory, and rules",
+      "Separate durable context from transient runtime state",
+      "Inspectable behaviour instead of improvised prompt chains",
+    ],
+  },
+  {
+    title: "Local-First, Auditable Workflows",
+    summary:
+      "Real task execution requires trust. My system design favours controllable workflows, documented tool use, and explicit boundaries for destructive or privacy-sensitive actions.",
+    evidence: [
+      "Local or semi-local workflows where practical",
+      "Clear permission boundaries for tools and account-level actions",
+      "Audit-friendly logs linking output to context and decisions",
+    ],
+  },
+];
+
+export const positioningPillars: PositioningPillar[] = [
+  {
+    label: "01 / Agent Systems",
+    title: "Reliable AI agents",
+    summary:
+      "I am studying how long-running assistants can keep identity, memory, tool use, and execution consistent enough for real work.",
+    points: ["single-controller architecture", "multi-model routing", "tool-backed workflows"],
+  },
+  {
+    label: "02 / Product Engineering",
+    title: "Full-stack AI products",
+    summary:
+      "I build interfaces, APIs, mobile flows, dashboards, and interaction systems that turn model capability into usable workflows.",
+    points: ["React / Next.js", "Android / Kotlin", "FastAPI / Flask"],
+  },
+  {
+    label: "03 / Trust Boundary",
+    title: "Security-aware deployment",
+    summary:
+      "My cyber-security background shapes how I think about permissions, audit trails, local-first control, and safe automation.",
+    points: ["explicit boundaries", "traceable decisions", "forensics-informed thinking"],
+  },
+];
+
+export const architectureLayers: ArchitectureLayer[] = [
+  {
+    id: "controller",
+    title: "Controller",
+    label: "Stable front-end",
+    summary:
+      "One coherent interaction surface reduces identity drift and keeps long-running collaboration readable.",
+    details: [
+      "Maintains the user-facing voice and task context.",
+      "Separates interface consistency from backend tool choice.",
+      "Makes the system feel like one assistant rather than a pile of chats.",
+    ],
+  },
+  {
+    id: "orchestration",
+    title: "Orchestration",
+    label: "Task routing",
+    summary:
+      "An orchestration layer decides which engine, workflow, or tool chain should handle each task.",
+    details: [
+      "Routes coding, research, planning, and automation work differently.",
+      "Keeps model choice tied to capability, cost, and reliability.",
+      "Allows the backend to evolve without changing the user surface.",
+    ],
+  },
+  {
+    id: "execution",
+    title: "Execution",
+    label: "Tool engines",
+    summary:
+      "Execution engines do real work: coding, file operations, research, analysis, and structured automation.",
+    details: [
+      "Uses different tools where they are strongest.",
+      "Keeps dangerous or account-level actions behind explicit boundaries.",
+      "Treats output as inspectable work, not mysterious magic.",
+    ],
+  },
+  {
+    id: "memory",
+    title: "Memory",
+    label: "Layered context",
+    summary:
+      "Long-term usefulness depends on durable memory anchors, not only chat history.",
+    details: [
+      "Separates user profile, project context, current task state, and system notes.",
+      "Keeps memory readable enough to update manually.",
+      "Supports continuity across sessions and tools.",
+    ],
+  },
+  {
+    id: "governance",
+    title: "Governance",
+    label: "Rules and limits",
+    summary:
+      "Governance files define what the system is, what it can do, and when it should slow down or ask.",
+    details: [
+      "Documents tools, permissions, boundaries, and operating rules.",
+      "Supports auditability for sensitive or destructive actions.",
+      "Turns personal AI from improvisation into maintainable infrastructure.",
+    ],
+  },
+];
+
+export const roadmap: RoadmapItem[] = [
+  {
+    phase: "Now",
+    title: "Public research portfolio",
+    summary:
+      "Make the AI-agent direction mentor-safe, evidence-backed, and connected to my software engineering work.",
+    outputs: ["Agent Lab page", "project archive", "research notes"],
+  },
+  {
+    phase: "Next",
+    title: "Evaluated agent workflows",
+    summary:
+      "Document real workflows with criteria for cost, reliability, memory quality, failure modes, and human control.",
+    outputs: ["workflow logs", "evaluation notes", "case-study pages"],
+  },
+  {
+    phase: "Later",
+    title: "Embodied companion systems",
+    summary:
+      "Extend agent architecture into multimodal interfaces, physical devices, and emotionally aware interaction design.",
+    outputs: ["vision interfaces", "robotics prototypes", "human-agent studies"],
+  },
+];
+
+export const supervisionFit: SupervisionFit[] = [
+  {
+    title: "Reliable AI agents",
+    summary:
+      "Supervision around agentic systems, tool use, memory, explainability, evaluation, or human-AI collaboration.",
+    signals: ["agent architecture", "model/tool routing", "long-running interaction"],
+  },
+  {
+    title: "Human-centred intelligent systems",
+    summary:
+      "Projects where AI is evaluated through usability, workflow value, interface design, and real deployment constraints.",
+    signals: ["full-stack prototypes", "HCI", "user-facing workflows"],
+  },
+  {
+    title: "Trustworthy and secure deployment",
+    summary:
+      "Applied research where AI systems need boundaries, audit trails, security reasoning, and operational discipline.",
+    signals: ["cyber background", "auditability", "local-first control"],
   },
 ];
 
@@ -97,6 +296,24 @@ export const education = [
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "personal-ai-agent-research",
+    title: "Personal AI Agent Research",
+    category: "AI Agent Systems",
+    period: "2026",
+    context: "Self-directed research and engineering lab",
+    role: "System designer and independent researcher",
+    stack: ["LLM agents", "Multi-model routing", "Governance files", "Ollama", "Codex", "Claude Code"],
+    link: "https://zeyu.app/agent-research",
+    summary:
+      "A public-facing research direction exploring stable personal AI systems, single-controller architecture, modular execution engines, layered memory, and local-first governance.",
+    highlights: [
+      "Designed a single-controller / modular-backend architecture to reduce identity drift and keep long-running work coherent.",
+      "Compared 10+ model providers and local deployments to understand cost, capability, stability, and workflow fit.",
+      "Formalised governance-file thinking around identity, tools, memory, project context, and action boundaries.",
+      "Focused on mentor-safe, inspectable AI systems rather than generic chatbot usage or unstructured prompt experimentation.",
+    ],
+  },
   {
     slug: "ai-driven-android-malware-detection",
     title: "AI-Driven Android Malware Detection System",
@@ -204,16 +421,16 @@ export const skillGroups = [
     items: ["Python", "Java", "Kotlin", "JavaScript / TypeScript", "C", "C++"],
   },
   {
-    category: "ML & Computer Vision",
-    items: ["scikit-learn", "KNN", "Neural networks", "OpenCV", "MediaPipe", "Jupyter"],
+    category: "AI & Agents",
+    items: ["LLM agents", "Tool use", "Multi-model orchestration", "Memory design", "Ollama", "n8n"],
   },
   {
-    category: "Mobile & Full-Stack",
-    items: ["Android Studio", "Jetpack Compose", "Firebase", "Flask", "FastAPI", "React", "Next.js"],
+    category: "Full-Stack & Mobile",
+    items: ["React", "Next.js", "Flask", "FastAPI", "Android Studio", "Jetpack Compose", "Firebase"],
   },
   {
-    category: "Security & Tooling",
-    items: ["Wireshark", "Autopsy", "John the Ripper", "Docker", "Linux", "Git / GitHub"],
+    category: "ML, CV & Security",
+    items: ["OpenCV", "MediaPipe", "scikit-learn", "Wireshark", "Autopsy", "Docker", "Git / GitHub"],
   },
 ];
 
@@ -241,6 +458,22 @@ export const experience = [
 ];
 
 export const notes: Note[] = [
+  {
+    slug: "stable-personal-ai-agent-architecture",
+    title: "Stable Personal AI Agent Architecture",
+    date: "2026",
+    category: "AI Agents",
+    readTime: "5 min read",
+    excerpt:
+      "Why I am treating personal AI systems as architecture: one stable controller, modular execution engines, layered memory, and explicit governance.",
+    tags: ["AI Agents", "Memory", "Human-AI Interaction"],
+    content: [
+      "My current AI-agent work is driven by one practical question: how can a personal AI system move beyond chat and become a stable, governable, execution-capable assistant for real work over time?",
+      "The architectural direction I prefer is a single front-end controller with modular backend execution engines. The user interacts with one coherent surface, while tools and models can be routed behind the scenes based on task, cost, and reliability.",
+      "I care about governance because long-running systems cannot depend only on prompt text or chat history. Identity, user context, project memory, tool permissions, and action boundaries should be explicit enough to inspect and maintain.",
+      "This is also where my security background matters. A capable agent needs boundaries: what it can do, when it should ask, how sensitive workflows are handled, and how its outputs can be traced back to context and decisions.",
+    ],
+  },
   {
     slug: "behaviour-based-android-malware-detection",
     title: "Behaviour-Based Android Malware Detection",

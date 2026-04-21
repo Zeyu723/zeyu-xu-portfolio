@@ -11,8 +11,9 @@ export default function ResearchPage() {
           Research
         </h1>
         <p className="mt-8 max-w-4xl text-xl leading-relaxed text-muted">
-          {profile.researchStatement} The common thread is practical methodology: systems
-          should be measurable, explainable, and usable beyond a demo.
+          {profile.researchStatement} The common thread is practical methodology: systems should
+          be measurable, explainable, usable beyond a demo, and careful about what they are allowed
+          to do.
         </p>
       </section>
 
@@ -58,14 +59,14 @@ export default function ResearchPage() {
           </div>
           <div className="md:col-span-4 md:col-start-9">
             <p className="mb-8 text-lg leading-relaxed text-background/70">
-              I would like to discuss research fit around mobile security, digital forensics,
-              and applied ML systems.
+              I would like to discuss research fit around reliable AI agents, human-AI workflows,
+              secure deployment, and applied intelligent systems.
             </p>
             <Link
-              to="/contact"
+              to="/agent-research"
               className="inline-flex bg-background px-6 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-accent hover:text-white"
             >
-              Contact Zeyu
+              View Agent Lab
             </Link>
           </div>
         </div>

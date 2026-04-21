@@ -1,16 +1,45 @@
-import { ArrowRight, ExternalLink, Mail } from "lucide-react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { ArrowRight, Mail } from "lucide-react";
+import { motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
+import type { PointerEvent } from "react";
 import { Link } from "react-router-dom";
 import { profile, researchInterests } from "../content/portfolio";
+
+const signalWords = [
+  "AI AGENTS",
+  "FULL-STACK SYSTEMS",
+  "HUMAN-AI WORKFLOWS",
+  "SECURITY-AWARE DEPLOYMENT",
+  "PERTH / WA",
+];
 
 export default function Hero() {
   const { scrollYProgress } = useScroll();
   const fieldY = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const pointerX = useMotionValue(720);
+  const pointerY = useMotionValue(220);
+  const trackerX = useSpring(pointerX, { stiffness: 90, damping: 22 });
+  const trackerY = useSpring(pointerY, { stiffness: 90, damping: 22 });
+
+  const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    pointerX.set(event.clientX - bounds.left - 44);
+    pointerY.set(event.clientY - bounds.top - 44);
+  };
 
   return (
-    <section className="relative overflow-hidden pt-20 sm:pt-24">
+    <section className="relative overflow-hidden pt-20 sm:pt-24" onPointerMove={handlePointerMove}>
       <div className="lab-grid absolute inset-0" />
       <div className="hero-scan absolute inset-x-0 top-20 hidden h-px bg-accent/50 shadow-[0_0_28px_rgba(37,99,235,0.55)] sm:block" />
+      <motion.div
+        aria-hidden="true"
+        style={{ x: trackerX, y: trackerY }}
+        className="pointer-events-none absolute left-0 top-0 z-10 hidden h-20 w-20 border border-accent/45 bg-background/20 backdrop-blur-[1px] lg:block"
+      >
+        <span className="absolute -left-1 -top-1 h-3 w-3 border-l border-t border-accent" />
+        <span className="absolute -right-1 -top-1 h-3 w-3 border-r border-t border-accent" />
+        <span className="absolute -bottom-1 -left-1 h-3 w-3 border-b border-l border-accent" />
+        <span className="absolute -bottom-1 -right-1 h-3 w-3 border-b border-r border-accent" />
+      </motion.div>
       <motion.div
         style={{ y: fieldY }}
         className="absolute inset-y-16 right-0 hidden w-[56vw] lg:block"
@@ -91,11 +120,18 @@ export default function Hero() {
             className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:flex sm:flex-row"
           >
             <Link
-              to="/projects"
+              to="/agent-research"
               className="group/cta col-span-2 inline-flex w-full items-center justify-center gap-3 bg-foreground px-6 py-3.5 text-sm font-semibold text-background transition-colors hover:bg-accent sm:w-auto"
             >
-              View Projects
+              Open Agent Lab
               <ArrowRight size={18} className="transition-transform group-hover/cta:translate-x-1" />
+            </Link>
+            <Link
+              to="/projects"
+              className="group/cta inline-flex w-full items-center justify-center gap-3 border border-border bg-background/60 px-4 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-accent hover:text-accent sm:w-auto sm:px-6"
+            >
+              Projects
+              <ArrowRight size={18} className="transition-transform group-hover/cta:translate-x-0.5" />
             </Link>
             <a
               href={`mailto:${profile.email}?subject=Graduate research conversation`}
@@ -103,15 +139,6 @@ export default function Hero() {
             >
               Email Zeyu
               <Mail size={18} className="transition-transform group-hover/cta:-translate-y-0.5" />
-            </a>
-            <a
-              href={profile.portfolioDemo}
-              target="_blank"
-              rel="noreferrer"
-              className="group/cta inline-flex w-full items-center justify-center gap-3 border border-border bg-background/60 px-4 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-accent hover:text-accent sm:w-auto sm:px-6"
-            >
-              Galaxy Demo
-              <ExternalLink size={18} className="transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
             </a>
           </motion.div>
         </div>
@@ -143,6 +170,20 @@ export default function Hero() {
               ))}
             </div>
           </div>
+        </motion.div>
+      </div>
+
+      <div className="relative z-10 border-y border-border bg-background/70 py-4 backdrop-blur">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+          className="flex w-max gap-10 whitespace-nowrap px-6"
+        >
+          {[...signalWords, ...signalWords, ...signalWords].map((word, index) => (
+            <span key={`${word}-${index}`} className="label-mono text-muted">
+              {word}
+            </span>
+          ))}
         </motion.div>
       </div>
     </section>

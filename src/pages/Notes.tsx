@@ -11,7 +11,8 @@ export default function NotesPage() {
           Notes
         </h1>
         <p className="mt-8 max-w-3xl text-xl leading-relaxed text-muted">
-          Short research notes that show how I think about applied AI, security, and HCI systems.
+          Short research notes on AI-agent architecture, applied AI, security-aware workflows,
+          and human-centred interfaces.
         </p>
       </section>
 

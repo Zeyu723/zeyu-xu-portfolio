@@ -32,7 +32,8 @@ export default function Projects() {
         <div className="md:col-span-4 md:col-start-9">
           <div className="accent-line mb-8" />
           <p className="text-lg leading-relaxed text-muted">
-            Work from capstone research, hackathons, computer vision, and digital forensics.
+            Work from AI-agent experimentation, capstone research, hackathons, computer vision,
+            full-stack systems, and digital forensics.
           </p>
         </div>
       </div>
