@@ -42,10 +42,49 @@ export default function Hero() {
       </motion.div>
       <motion.div
         style={{ y: fieldY }}
-        className="absolute inset-y-16 right-0 hidden w-[56vw] lg:block"
+        className="absolute inset-y-16 right-0 hidden w-[58vw] lg:block"
         aria-hidden="true"
       >
         <div className="data-sweep absolute right-16 top-0 h-full w-px bg-border" />
+        <div className="hero-orbit absolute right-16 top-16 h-[34rem] w-[34rem] border border-border/80" />
+        <div className="hero-orbit hero-orbit-reverse absolute right-36 top-28 h-[24rem] w-[24rem] border border-accent/25" />
+        <div className="hero-radar absolute right-[12.5rem] top-[12rem] h-[14rem] w-[14rem] rounded-full border border-border/80" />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 7.5, repeat: Infinity, ease: "linear" }}
+          className="absolute right-[12.5rem] top-[12rem] h-[14rem] w-[14rem] rounded-full"
+        >
+          <span className="absolute left-1/2 top-1/2 h-px w-1/2 origin-left bg-gradient-to-r from-accent to-transparent" />
+        </motion.div>
+        <svg
+          className="absolute right-16 top-16 h-[34rem] w-[34rem] overflow-visible"
+          viewBox="0 0 544 544"
+        >
+          <motion.path
+            d="M272 88 C382 112 442 208 404 292 C362 388 238 426 154 342 C82 270 118 142 272 88"
+            fill="none"
+            stroke="rgba(37,99,235,0.28)"
+            strokeWidth="1"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{ duration: 1.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          />
+        </svg>
+        <div className="absolute right-16 top-[31rem] w-[28rem] space-y-4">
+          {["agent architecture", "full-stack systems", "safe execution"].map((label, index) => (
+            <div key={label} className="grid grid-cols-[9rem_1fr] items-center gap-4">
+              <span className="label-mono text-muted">{label}</span>
+              <span className="h-px overflow-hidden bg-border">
+                <motion.span
+                  initial={{ x: "-100%" }}
+                  animate={{ x: ["-100%", "0%", "100%"] }}
+                  transition={{ duration: 2.4, delay: index * 0.28, repeat: Infinity, ease: "easeInOut" }}
+                  className="block h-full w-1/2 bg-accent"
+                />
+              </span>
+            </div>
+          ))}
+        </div>
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
@@ -149,8 +188,17 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="hidden lg:col-span-4 lg:block"
         >
-          <div className="scan-panel relative overflow-hidden border-y border-border py-8">
-            <p className="label-mono mb-6 text-accent">Research Fit</p>
+          <div className="scan-panel relative overflow-hidden border-y border-border bg-background/70 py-8 backdrop-blur">
+            <div className="mb-6 flex items-center justify-between gap-4">
+              <p className="label-mono text-accent">Research Fit</p>
+              <motion.span
+                animate={{ opacity: [0.35, 1, 0.35] }}
+                transition={{ duration: 1.8, repeat: Infinity }}
+                className="label-mono text-muted"
+              >
+                Live Direction
+              </motion.span>
+            </div>
             <div className="space-y-6">
               {researchInterests.map((interest, index) => (
                 <motion.div

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Trophy } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Trophy } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { projects } from "../content/portfolio";
@@ -102,6 +102,17 @@ export default function Projects() {
                   <ArrowUpRight size={17} />
                 </span>
               </Link>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-3 text-sm font-semibold text-muted transition-colors hover:text-accent"
+                >
+                  {project.linkLabel ?? "Open live demo"}
+                  <ExternalLink size={16} />
+                </a>
+              )}
             </div>
           </motion.article>
         ))}

@@ -65,7 +65,7 @@ export default function ProjectDetail() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-foreground px-5 py-4 text-sm font-semibold text-background transition-colors hover:bg-accent"
               >
-                Open live demo
+                {project.linkLabel ?? "Open live demo"}
                 <ExternalLink size={17} />
               </a>
             )}

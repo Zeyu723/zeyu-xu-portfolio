@@ -17,6 +17,7 @@ export type Project = {
   highlights: string[];
   recognition?: string;
   link?: string;
+  linkLabel?: string;
 };
 
 export type Note = {
@@ -305,6 +306,7 @@ export const projects: Project[] = [
     role: "System designer and independent researcher",
     stack: ["LLM agents", "Multi-model routing", "Governance files", "Ollama", "Codex", "Claude Code"],
     link: "https://zeyu.app/agent-research",
+    linkLabel: "Open Agent Lab",
     summary:
       "A public-facing research direction exploring stable personal AI systems, single-controller architecture, modular execution engines, layered memory, and local-first governance.",
     highlights: [
@@ -340,13 +342,16 @@ export const projects: Project[] = [
     context: "EcoPulse Hackathon, Perth",
     role: "Full-stack team member",
     stack: ["FastAPI", "Next.js", "Android", "IoT notification panel"],
+    link: "https://ecopulse-microgrid.zeyu.app/",
+    linkLabel: "Open dashboard",
     summary:
-      "A monitoring ecosystem giving grid operators live visibility into simulated micro-grid operations through a backend, dashboard, Android client, and physical alert panel.",
+      "A deployed monitoring ecosystem giving grid operators live visibility into simulated micro-grid operations through a FastAPI backend, Next.js dashboard, Android client, and physical alert panel.",
     recognition: "Grand Prize, 1st Place - Renewable Integration & Digitalisation challenge",
     highlights: [
       "Won 1st place in the Renewable Integration & Digitalisation challenge.",
       "Built across simulation backend, real-time dashboard, Android client, and operator notification hardware.",
       "Focused the product story on operational visibility and fast response to grid-state changes.",
+      "Deployed the public dashboard at ecopulse-microgrid.zeyu.app as a portfolio-ready live demo.",
     ],
   },
   {
