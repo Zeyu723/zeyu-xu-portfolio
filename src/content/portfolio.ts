@@ -343,7 +343,7 @@ export const projects: Project[] = [
     slug: "ai-driven-android-malware-detection",
     title: "AI-Driven Android Malware Detection System",
     category: "Research Project",
-    period: "2025 - Present",
+    period: "2025 - May 2026",
     context: "Curtin University capstone, supervised team project",
     role: "Android client lead and ML pipeline contributor",
     stack: ["Android", "Kotlin", "Jetpack Compose", "Python", "ML", "REST APIs"],
@@ -529,7 +529,7 @@ export const notes: Note[] = [
     tags: ["Android", "Malware", "Machine Learning"],
     content: [
       "Static signatures are useful, but they do not fully capture how a malicious Android application behaves once it starts requesting permissions, communicating over the network, and moving through runtime states.",
-      "My current capstone direction focuses on data-exfiltration malware and a behaviour-first pipeline. The engineering challenge is to connect Android scan workflows, backend APIs, and machine-learning baselines in a way that produces useful reports rather than only model scores.",
+      "My capstone project focused on data-exfiltration malware and a behaviour-first pipeline. The engineering challenge was to connect Android scan workflows, backend APIs, and machine-learning baselines in a way that produces useful reports rather than only model scores.",
       "For graduate research, the open question I want to keep exploring is interpretability: how can a mobile-security system explain why it considers behaviour suspicious, and how can those explanations support real investigation workflows?",
     ],
   },
