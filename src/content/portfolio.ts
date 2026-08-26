@@ -358,6 +358,25 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "e8-compass-portal",
+    title: "Sovereign E8 — AI Security Assessment Portal",
+    category: "Cybersecurity / AI",
+    period: "Jun 2026",
+    context: "CyberWest Hackathon 2026, WA Government security challenge, Perth",
+    role: "Team lead — 5-person team",
+    stack: ["Next.js", "TypeScript", "5-agent orchestration", "ACSC Essential Eight", "Vercel"],
+    link: "https://e8-compass-portal.vercel.app",
+    linkLabel: "Open live portal",
+    summary:
+      "An AI-assisted Essential Eight self-assessment portal built for a WA Government security challenge: five orchestrated agents read uploaded evidence, map it to ACSC controls, and produce maturity-scored, auditable recommendations.",
+    highlights: [
+      "Led a five-person team through a three-day government security hackathon, owning system architecture and the agent-pipeline design.",
+      "Designed a five-agent orchestrated pipeline that reads evidence, maps controls, scores against ACSC maturity levels, and generates recommendations.",
+      "Built the deterministic knowledge engine encoding Essential Eight control logic with a fixed rubric, keeping assessments auditable rather than vague LLM output.",
+      "Shipped a live Next.js portal with PDF evidence parsing, proxy-hardened deployment, and mobile-Safari compatibility fixes.",
+    ],
+  },
+  {
     slug: "smart-micro-grid-monitoring-platform",
     title: "Smart Micro-Grid Monitoring Platform",
     category: "Full-Stack / IoT",
