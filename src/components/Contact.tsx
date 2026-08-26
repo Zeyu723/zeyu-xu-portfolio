@@ -12,7 +12,7 @@ export default function Contact() {
     },
     {
       label: "LinkedIn",
-      value: "linkedin.com/in/zeyu-xu-658a51286",
+      value: "linkedin.com/in/zeyu-xu-perth",
       href: profile.linkedin,
       icon: Linkedin,
     },

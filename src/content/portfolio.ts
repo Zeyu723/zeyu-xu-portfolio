@@ -73,7 +73,7 @@ export const profile = {
   expected: "Expected 2026",
   location: "Perth, WA, Australia",
   email: "zeyu723@gmail.com",
-  linkedin: "https://www.linkedin.com/in/zeyu-xu-658a51286",
+  linkedin: "https://www.linkedin.com/in/zeyu-xu-perth/",
   github: "https://github.com/Zeyu723",
   portfolioDemo: "https://galaxy-zeyu.vercel.app",
   headline:
