@@ -317,6 +317,25 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "shorekeeper-pet",
+    title: "Shorekeeper Pixel Desktop Pet",
+    category: "AI Agent Systems",
+    period: "2026",
+    context: "Personal open-source project",
+    role: "Designer and maintainer",
+    stack: ["Python", "Tkinter", "JavaScript plugin bridge", "Hermes Desktop API", "GitHub"],
+    link: "https://github.com/Zeyu723/shorekeeper-pet",
+    linkLabel: "View on GitHub",
+    summary:
+      "An open-source pixel desktop companion that connects to a real AI agent runtime — agent replies stream into an animated side bubble, turning a desktop pet into a live human-AI interaction surface.",
+    highlights: [
+      "Bridged a standalone tkinter pet window to the Hermes Desktop agent session through a plugin layer, so real assistant replies drive typewriter-effect speech bubbles.",
+      "Designed the interaction model around progressive disclosure: single-click interactions, double-click chat, fade-in bubbles, and a fixed bubble anchor with explicit close.",
+      "Hardened real failure modes from production use: FIFO request pairing under queued consecutive sends, and timestamped SHA-256 backups before any core-file edit.",
+      "Shipped v1.1 open source with documentation, iterating through hands-on user acceptance testing rather than automated E2E alone.",
+    ],
+  },
+  {
     slug: "ai-driven-android-malware-detection",
     title: "AI-Driven Android Malware Detection System",
     category: "Research Project",
@@ -463,6 +482,22 @@ export const experience = [
 ];
 
 export const notes: Note[] = [
+  {
+    slug: "codex-as-a-platform-notes",
+    title: "Codex as a Platform: What Open Sourcing the Harness Means",
+    date: "2026",
+    category: "AI Agents",
+    readTime: "5 min read",
+    excerpt:
+      "OpenAI opened the Codex agent harness as an Apache 2.0 platform. Notes on the architecture, the reported numbers, and what it changes for personal agent systems.",
+    tags: ["Codex", "Agent Harness", "Architecture"],
+    content: [
+      "On 20 August 2026 OpenAI positioned Codex as an open platform: the agent harness behind it is now Apache 2.0 licensed, with a CLI for automation pipelines, TypeScript and Python SDKs, and an app-server that exposes the agent loop over JSON-RPC so it can be embedded inside other products.",
+      "The reported numbers are the interesting part: harness-level optimisations such as preserving the reasoning chain and compacting context lifted ARC-AGI-3 performance from 13.3% to 38.3% with the same underlying model, while cutting token consumption to about a sixth. Capability gains did not come from a bigger model — they came from the layer around it.",
+      "The core argument matches how I think about my own system: agent products do not all have to be chat boxes. The product owns context, business rules, and tools; the harness runs the loop underneath. That is the same separation behind a single stable controller with replaceable execution engines.",
+      "For personal agent work this shifts the build-or-reuse question. A governed, inspectable harness that I can embed — rather than rebuild — makes the harder problems (memory, evaluation, boundaries) the places where my own design effort is best spent.",
+    ],
+  },
   {
     slug: "stable-personal-ai-agent-architecture",
     title: "Stable Personal AI Agent Architecture",
