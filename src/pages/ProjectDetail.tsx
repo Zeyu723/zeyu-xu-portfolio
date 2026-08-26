@@ -72,6 +72,32 @@ export default function ProjectDetail() {
           </aside>
 
           <div className="space-y-12 md:col-span-7 md:col-start-6">
+            {project.image && (
+              <figure className="border border-border">
+                <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-foreground">
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-[0.12]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)",
+                      backgroundSize: "48px 48px",
+                    }}
+                  />
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt ?? project.title}
+                    className="relative h-[92%] w-auto object-contain [image-rendering:pixelated] drop-shadow-[0_0_28px_rgba(56,132,255,0.45)]"
+                  />
+                </div>
+                <figcaption className="flex items-center justify-between border-t border-border px-5 py-3">
+                  <span className="label-mono text-accent">Live sprite</span>
+                  <span className="text-xs text-muted">
+                    Agent-start animation — the pet reacts to real runtime events
+                  </span>
+                </figcaption>
+              </figure>
+            )}
             <section>
               <h2 className="mb-5 text-3xl font-bold">Summary</h2>
               <p className="text-xl leading-relaxed text-muted">{project.summary}</p>

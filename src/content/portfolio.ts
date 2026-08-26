@@ -18,6 +18,8 @@ export type Project = {
   recognition?: string;
   link?: string;
   linkLabel?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export type Note = {
@@ -320,12 +322,14 @@ export const projects: Project[] = [
     slug: "shorekeeper-pet",
     title: "Shorekeeper Pixel Desktop Pet",
     category: "AI Agent Systems",
-    period: "2026",
     context: "Personal open-source project",
     role: "Designer and maintainer",
     stack: ["Python", "Tkinter", "JavaScript plugin bridge", "Hermes Desktop API", "GitHub"],
     link: "https://github.com/Zeyu723/shorekeeper-pet",
     linkLabel: "View on GitHub",
+    period: "Aug 2026",
+    image: "/shorekeeper-pet.webp",
+    imageAlt: "The Shorekeeper pixel companion reacting to a live agent event — silver-blue hair, wide-brimmed hat, starfield dress",
     summary:
       "An open-source pixel desktop companion that connects to a real AI agent runtime — agent replies stream into an animated side bubble, turning a desktop pet into a live human-AI interaction surface.",
     highlights: [

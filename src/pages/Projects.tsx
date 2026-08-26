@@ -58,6 +58,15 @@ export default function ProjectsPage() {
                   <span className="label-mono text-accent">{project.category}</span>
                   <span className="label-mono">{project.period}</span>
                 </div>
+                {project.image && (
+                  <div className="mb-5 flex h-36 items-center justify-center overflow-hidden border border-border bg-foreground">
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt ?? project.title}
+                      className="h-[88%] w-auto object-contain [image-rendering:pixelated] transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_0_20px_rgba(56,132,255,0.4)]"
+                    />
+                  </div>
+                )}
                 <h2 className="mb-5 text-3xl font-bold leading-tight transition-colors group-hover:text-accent">
                   {project.title}
                 </h2>

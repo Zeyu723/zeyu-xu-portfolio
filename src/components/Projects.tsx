@@ -65,6 +65,15 @@ export default function Projects() {
                 <span className="label-mono">{project.period}</span>
               </div>
               <p className="text-sm text-muted">{project.category}</p>
+              {project.image && (
+                <div className="mt-6 hidden h-28 w-28 items-center justify-center border border-border bg-foreground lg:flex">
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt ?? project.title}
+                    className="h-[92%] w-auto object-contain [image-rendering:pixelated] drop-shadow-[0_0_18px_rgba(56,132,255,0.45)]"
+                  />
+                </div>
+              )}
             </div>
 
             <div className="lg:col-span-6">
